@@ -216,10 +216,14 @@ public class VoucherOrderServiceImpl extends ServiceImpl<VoucherOrderMapper, Vou
     public Result seckillVoucher(Long voucherId)
     {
         UserDTO user = UserHolder.getUser();
+        //获得用户ID
+        //Long userID = user.getId();
+        Long userID = 5L;
+        //todo:记得更改
         //执行lua脚本
         Long result = stringRedisTemplate.execute(SECKILL_SCRIPT,
                 Collections.emptyList(),
-                voucherId.toString(), user.getId().toString());
+                voucherId.toString(), userID.toString());
         if (result == null)
         {
             return Result.fail("订单异常");
@@ -234,7 +238,7 @@ public class VoucherOrderServiceImpl extends ServiceImpl<VoucherOrderMapper, Vou
         Long orderId = redisIDGenerator.nextID("oder");
         VoucherOrder voucherOrder = new VoucherOrder();
         voucherOrder.setVoucherId(voucherId);
-        voucherOrder.setUserId(user.getId());
+        voucherOrder.setUserId(userID);
         voucherOrder.setId(orderId);
         //加入到阻塞队列
         blockingQueue.add(voucherOrder);
