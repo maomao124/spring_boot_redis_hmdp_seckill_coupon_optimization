@@ -4,12 +4,14 @@ package mao.spring_boot_redis_hmdp.service.impl;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import mao.spring_boot_redis_hmdp.dto.Result;
+import mao.spring_boot_redis_hmdp.dto.UserDTO;
 import mao.spring_boot_redis_hmdp.entity.SeckillVoucher;
 import mao.spring_boot_redis_hmdp.entity.VoucherOrder;
 import mao.spring_boot_redis_hmdp.mapper.VoucherOrderMapper;
 import mao.spring_boot_redis_hmdp.service.ISeckillVoucherService;
 import mao.spring_boot_redis_hmdp.service.IVoucherOrderService;
 import mao.spring_boot_redis_hmdp.utils.RedisIDGenerator;
+import mao.spring_boot_redis_hmdp.utils.UserHolder;
 import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
 import org.springframework.core.io.ClassPathResource;
@@ -21,6 +23,7 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 import java.time.LocalDateTime;
+import java.util.Collections;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ExecutorService;
@@ -67,10 +70,7 @@ public class VoucherOrderServiceImpl extends ServiceImpl<VoucherOrderMapper, Vou
     @PostConstruct
     private void init()
     {
-        SECKILL_ORDER_EXECUTOR.submit(() ->
-        {
-            new VoucherOrderHandler();
-        });
+        SECKILL_ORDER_EXECUTOR.submit((Runnable) VoucherOrderHandler::new);
     }
 
     private class VoucherOrderHandler implements Runnable
@@ -84,11 +84,13 @@ public class VoucherOrderServiceImpl extends ServiceImpl<VoucherOrderMapper, Vou
                 try
                 {
                     //获取订单信息
-
+                    VoucherOrder voucherOrder = blockingQueue.take();
+                    //创建订单
+                    createVoucherOrder(voucherOrder);
                 }
                 catch (Exception e)
                 {
-
+                    e.printStackTrace();
                 }
             }
         }
@@ -213,11 +215,36 @@ public class VoucherOrderServiceImpl extends ServiceImpl<VoucherOrderMapper, Vou
     @Override
     public Result seckillVoucher(Long voucherId)
     {
-
+        UserDTO user = UserHolder.getUser();
+        //执行lua脚本
+        Long result = stringRedisTemplate.execute(SECKILL_SCRIPT,
+                Collections.emptyList(),
+                voucherId.toString(), user.getId().toString());
+        if (result == null)
+        {
+            return Result.fail("订单异常");
+        }
+        // 判断结果是否为 0
+        if (result != 0)
+        {
+            // 不为 0 ，代表没有购买资格
+            Result.fail(result == 1 ? "库存不足！" : "不能重复下单!");
+        }
+        //为0，创建订单
+        Long orderId = redisIDGenerator.nextID("oder");
+        VoucherOrder voucherOrder = new VoucherOrder();
+        voucherOrder.setVoucherId(voucherId);
+        voucherOrder.setUserId(user.getId());
+        voucherOrder.setId(orderId);
+        //加入到阻塞队列
+        blockingQueue.add(voucherOrder);
+        //返回订单
+        return Result.ok(voucherOrder);
     }
 
     /**
      * 创建订单
+     *
      * @param voucherOrder VoucherOrder
      */
     private void createVoucherOrder(VoucherOrder voucherOrder)
@@ -270,7 +297,7 @@ public class VoucherOrderServiceImpl extends ServiceImpl<VoucherOrderMapper, Vou
             if (!update)
             {
                 //失败
-                return ;
+                return;
             }
             //扣减成功
             //保存订单
