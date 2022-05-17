@@ -43,3 +43,30 @@
 2022-05-17 21:56:07.439  INFO 21360 --- [main] eckillCouponOptimizationApplicationTests : Started SpringBootRedisHmdpSeckillCouponOptimizationApplicationTests in 6.264 seconds (JVM running for 7.167)
 2022-05-17 21:56:08.114  INFO 21360 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
 2022-05-17 21:56:08.115  INFO 21360 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-05-17 22:08:52.762  INFO 4472 --- [restartedMain] HmdpSeckillCouponOptimizationApplication : Starting SpringBootRedisHmdpSeckillCouponOptimizationApplication using Java 16.0.2 on mao with PID 4472 (H:\程序\大三下期\spring_boot_redis_hmdp秒杀优惠券优化\target\classes started by mao in H:\程序\大三下期\spring_boot_redis_hmdp秒杀优惠券优化)
+2022-05-17 22:08:52.763 DEBUG 4472 --- [restartedMain] HmdpSeckillCouponOptimizationApplication : Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-05-17 22:08:52.763  INFO 4472 --- [restartedMain] HmdpSeckillCouponOptimizationApplication : The following 1 profile is active: "dev"
+2022-05-17 22:08:52.796  INFO 4472 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-17 22:08:52.797  INFO 4472 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-17 22:08:53.542  INFO 4472 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-05-17 22:08:53.543  INFO 4472 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-05-17 22:08:53.565  INFO 4472 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2022-05-17 22:08:54.042  INFO 4472 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-05-17 22:08:54.049  INFO 4472 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-17 22:08:54.049  INFO 4472 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.62]
+2022-05-17 22:08:54.116  INFO 4472 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-17 22:08:54.116  INFO 4472 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1319 ms
+2022-05-17 22:08:54.343  INFO 4472 --- [restartedMain] org.redisson.Version                     : Redisson 3.17.0
+2022-05-17 22:08:54.600  INFO 4472 --- [redisson-netty-2-19] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-05-17 22:08:54.609  INFO 4472 --- [redisson-netty-2-19] o.r.c.pool.MasterConnectionPool          : 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-05-17 22:08:54.737  INFO 4472 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-05-17 22:08:54.835  INFO 4472 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-05-17 22:08:55.843  INFO 4472 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-17 22:08:55.847  INFO 4472 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-05-17 22:08:55.896  INFO 4472 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-05-17 22:08:55.911  INFO 4472 --- [restartedMain] HmdpSeckillCouponOptimizationApplication : Started SpringBootRedisHmdpSeckillCouponOptimizationApplication in 3.468 seconds (JVM running for 4.038)
+2022-05-17 22:08:56.117  INFO 4472 --- [RMI TCP Connection(3)-172.28.144.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-17 22:08:56.117  INFO 4472 --- [RMI TCP Connection(3)-172.28.144.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-17 22:08:56.118  INFO 4472 --- [RMI TCP Connection(3)-172.28.144.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-05-17 22:09:32.528  INFO 4472 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-05-17 22:09:32.531  INFO 4472 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed

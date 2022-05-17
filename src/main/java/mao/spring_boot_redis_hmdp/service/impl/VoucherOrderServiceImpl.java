@@ -10,6 +10,7 @@ import mao.spring_boot_redis_hmdp.entity.VoucherOrder;
 import mao.spring_boot_redis_hmdp.mapper.VoucherOrderMapper;
 import mao.spring_boot_redis_hmdp.service.ISeckillVoucherService;
 import mao.spring_boot_redis_hmdp.service.IVoucherOrderService;
+import mao.spring_boot_redis_hmdp.utils.RedisConstants;
 import mao.spring_boot_redis_hmdp.utils.RedisIDGenerator;
 import mao.spring_boot_redis_hmdp.utils.UserHolder;
 import org.redisson.api.RLock;
@@ -216,6 +217,12 @@ public class VoucherOrderServiceImpl extends ServiceImpl<VoucherOrderMapper, Vou
     @Override
     public Result seckillVoucher(Long voucherId)
     {
+        String s = stringRedisTemplate.opsForValue().get(RedisConstants.SECKILL_STOCK_KEY + voucherId);
+        //判断此优惠券是否存在
+        if (s == null)
+        {
+            return Result.fail("此优惠券不存在");
+        }
         UserDTO user = UserHolder.getUser();
         //获得用户ID
         //Long userID = user.getId();
