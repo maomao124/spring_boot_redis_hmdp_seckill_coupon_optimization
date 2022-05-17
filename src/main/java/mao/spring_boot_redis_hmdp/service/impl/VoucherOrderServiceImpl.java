@@ -87,6 +87,7 @@ public class VoucherOrderServiceImpl extends ServiceImpl<VoucherOrderMapper, Vou
                     VoucherOrder voucherOrder = blockingQueue.take();
                     //创建订单
                     createVoucherOrder(voucherOrder);
+                    log.debug("异步订单创建任务执行成功！订单id：" + voucherOrder.getVoucherId());
                 }
                 catch (Exception e)
                 {
