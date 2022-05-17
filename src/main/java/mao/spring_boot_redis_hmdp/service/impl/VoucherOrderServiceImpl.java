@@ -252,7 +252,8 @@ public class VoucherOrderServiceImpl extends ServiceImpl<VoucherOrderMapper, Vou
      *
      * @param voucherOrder VoucherOrder
      */
-    private void createVoucherOrder(VoucherOrder voucherOrder)
+    @Transactional
+    protected void createVoucherOrder(VoucherOrder voucherOrder)
     {
         //判断当前优惠券用户是否已经下过单
         //获得用户id
