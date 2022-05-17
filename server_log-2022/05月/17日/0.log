@@ -1,0 +1,138 @@
+2022-05-17 21:47:59.786  INFO 11696 --- [restartedMain] HmdpSeckillCouponOptimizationApplication : Starting SpringBootRedisHmdpSeckillCouponOptimizationApplication using Java 16.0.2 on mao with PID 11696 (H:\程序\大三下期\spring_boot_redis_hmdp秒杀优惠券优化\target\classes started by mao in H:\程序\大三下期\spring_boot_redis_hmdp秒杀优惠券优化)
+2022-05-17 21:47:59.787 DEBUG 11696 --- [restartedMain] HmdpSeckillCouponOptimizationApplication : Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-05-17 21:47:59.787  INFO 11696 --- [restartedMain] HmdpSeckillCouponOptimizationApplication : The following 1 profile is active: "dev"
+2022-05-17 21:47:59.826  INFO 11696 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-17 21:47:59.827  INFO 11696 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-17 21:48:00.556  INFO 11696 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-05-17 21:48:00.558  INFO 11696 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-05-17 21:48:00.580  INFO 11696 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2022-05-17 21:48:01.057  INFO 11696 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-05-17 21:48:01.064  INFO 11696 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-17 21:48:01.064  INFO 11696 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.62]
+2022-05-17 21:48:01.135  INFO 11696 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-17 21:48:01.135  INFO 11696 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1307 ms
+2022-05-17 21:48:01.353  INFO 11696 --- [restartedMain] org.redisson.Version                     : Redisson 3.17.0
+2022-05-17 21:48:01.637  INFO 11696 --- [redisson-netty-2-13] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-05-17 21:48:01.650  INFO 11696 --- [redisson-netty-2-19] o.r.c.pool.MasterConnectionPool          : 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-05-17 21:48:01.781  INFO 11696 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-05-17 21:48:01.879  INFO 11696 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-05-17 21:48:02.888  INFO 11696 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-17 21:48:02.892  INFO 11696 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-05-17 21:48:02.946  INFO 11696 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-05-17 21:48:02.962  INFO 11696 --- [restartedMain] HmdpSeckillCouponOptimizationApplication : Started SpringBootRedisHmdpSeckillCouponOptimizationApplication in 3.563 seconds (JVM running for 4.362)
+2022-05-17 21:48:03.283  INFO 11696 --- [RMI TCP Connection(2)-172.28.144.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-17 21:48:03.284  INFO 11696 --- [RMI TCP Connection(2)-172.28.144.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-17 21:48:03.285  INFO 11696 --- [RMI TCP Connection(2)-172.28.144.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-05-17 21:48:22.517 ERROR 11696 --- [http-nio-8081-exec-1] m.s.config.WebExceptionAdvice            : org.springframework.dao.InvalidDataAccessApiUsageException: ERR Error running script (call to f_eb60518c95fa7d22bf2814509f5d42acba520979): @user_script:12: user_script:12: attempt to compare nil with number . channel: [id: 0xd5ec0cbd, L:/127.0.0.1:58025 - R:127.0.0.1/127.0.0.1:6379] command: (EVAL), promise: java.util.concurrent.CompletableFuture@3663d986[Not completed, 1 dependents], params: [[45, 45, 32, -28, -68, -104, -26, -125, -96, -27, ...], 0, [50], [53]]; nested exception is org.redisson.client.RedisException: ERR Error running script (call to f_eb60518c95fa7d22bf2814509f5d42acba520979): @user_script:12: user_script:12: attempt to compare nil with number . channel: [id: 0xd5ec0cbd, L:/127.0.0.1:58025 - R:127.0.0.1/127.0.0.1:6379] command: (EVAL), promise: java.util.concurrent.CompletableFuture@3663d986[Not completed, 1 dependents], params: [[45, 45, 32, -28, -68, -104, -26, -125, -96, -27, ...], 0, [50], [53]]
+
+org.springframework.dao.InvalidDataAccessApiUsageException: ERR Error running script (call to f_eb60518c95fa7d22bf2814509f5d42acba520979): @user_script:12: user_script:12: attempt to compare nil with number . channel: [id: 0xd5ec0cbd, L:/127.0.0.1:58025 - R:127.0.0.1/127.0.0.1:6379] command: (EVAL), promise: java.util.concurrent.CompletableFuture@3663d986[Not completed, 1 dependents], params: [[45, 45, 32, -28, -68, -104, -26, -125, -96, -27, ...], 0, [50], [53]]; nested exception is org.redisson.client.RedisException: ERR Error running script (call to f_eb60518c95fa7d22bf2814509f5d42acba520979): @user_script:12: user_script:12: attempt to compare nil with number . channel: [id: 0xd5ec0cbd, L:/127.0.0.1:58025 - R:127.0.0.1/127.0.0.1:6379] command: (EVAL), promise: java.util.concurrent.CompletableFuture@3663d986[Not completed, 1 dependents], params: [[45, 45, 32, -28, -68, -104, -26, -125, -96, -27, ...], 0, [50], [53]]
+	at org.redisson.spring.data.connection.RedissonExceptionConverter.convert(RedissonExceptionConverter.java:52) ~[redisson-spring-data-26-3.17.0.jar:3.17.0]
+	at org.redisson.spring.data.connection.RedissonExceptionConverter.convert(RedissonExceptionConverter.java:35) ~[redisson-spring-data-26-3.17.0.jar:3.17.0]
+	at org.springframework.data.redis.PassThroughExceptionTranslationStrategy.translate(PassThroughExceptionTranslationStrategy.java:44) ~[spring-data-redis-2.6.4.jar:2.6.4]
+	at org.redisson.spring.data.connection.RedissonConnection.transform(RedissonConnection.java:198) ~[redisson-spring-data-26-3.17.0.jar:3.17.0]
+	at org.redisson.spring.data.connection.RedissonConnection.syncFuture(RedissonConnection.java:193) ~[redisson-spring-data-26-3.17.0.jar:3.17.0]
+	at org.redisson.spring.data.connection.RedissonConnection.sync(RedissonConnection.java:361) ~[redisson-spring-data-26-3.17.0.jar:3.17.0]
+	at org.redisson.spring.data.connection.RedissonConnection.write(RedissonConnection.java:727) ~[redisson-spring-data-26-3.17.0.jar:3.17.0]
+	at org.redisson.spring.data.connection.RedissonConnection.eval(RedissonConnection.java:1926) ~[redisson-spring-data-26-3.17.0.jar:3.17.0]
+	at org.springframework.data.redis.connection.DefaultStringRedisConnection.eval(DefaultStringRedisConnection.java:2095) ~[spring-data-redis-2.6.4.jar:2.6.4]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567) ~[na:na]
+	at org.springframework.data.redis.core.CloseSuppressingInvocationHandler.invoke(CloseSuppressingInvocationHandler.java:61) ~[spring-data-redis-2.6.4.jar:2.6.4]
+	at jdk.proxy2/jdk.proxy2.$Proxy130.eval(Unknown Source) ~[na:na]
+	at org.springframework.data.redis.core.script.DefaultScriptExecutor.eval(DefaultScriptExecutor.java:84) ~[spring-data-redis-2.6.4.jar:2.6.4]
+	at org.springframework.data.redis.core.script.DefaultScriptExecutor.lambda$execute$0(DefaultScriptExecutor.java:68) ~[spring-data-redis-2.6.4.jar:2.6.4]
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:223) ~[spring-data-redis-2.6.4.jar:2.6.4]
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:190) ~[spring-data-redis-2.6.4.jar:2.6.4]
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:177) ~[spring-data-redis-2.6.4.jar:2.6.4]
+	at org.springframework.data.redis.core.script.DefaultScriptExecutor.execute(DefaultScriptExecutor.java:58) ~[spring-data-redis-2.6.4.jar:2.6.4]
+	at org.springframework.data.redis.core.script.DefaultScriptExecutor.execute(DefaultScriptExecutor.java:52) ~[spring-data-redis-2.6.4.jar:2.6.4]
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:344) ~[spring-data-redis-2.6.4.jar:2.6.4]
+	at mao.spring_boot_redis_hmdp.service.impl.VoucherOrderServiceImpl.seckillVoucher(VoucherOrderServiceImpl.java:225) ~[classes/:na]
+	at mao.spring_boot_redis_hmdp.service.impl.VoucherOrderServiceImpl$$FastClassBySpringCGLIB$$c32edb0b.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.19.jar:5.3.19]
+	at org.springframework.aop.framework.CglibAopProxy.invokeMethod(CglibAopProxy.java:386) ~[spring-aop-5.3.19.jar:5.3.19]
+	at org.springframework.aop.framework.CglibAopProxy.access$000(CglibAopProxy.java:85) ~[spring-aop-5.3.19.jar:5.3.19]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:704) ~[spring-aop-5.3.19.jar:5.3.19]
+	at mao.spring_boot_redis_hmdp.service.impl.VoucherOrderServiceImpl$$EnhancerBySpringCGLIB$$58853922.seckillVoucher(<generated>) ~[classes/:na]
+	at mao.spring_boot_redis_hmdp.controller.VoucherOrderController.seckillVoucher(VoucherOrderController.java:23) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) ~[tomcat-embed-core-9.0.62.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.62.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96) ~[spring-boot-actuator-2.6.7.jar:2.6.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at java.base/java.lang.Thread.run(Thread.java:831) ~[na:na]
+Caused by: org.redisson.client.RedisException: ERR Error running script (call to f_eb60518c95fa7d22bf2814509f5d42acba520979): @user_script:12: user_script:12: attempt to compare nil with number . channel: [id: 0xd5ec0cbd, L:/127.0.0.1:58025 - R:127.0.0.1/127.0.0.1:6379] command: (EVAL), promise: java.util.concurrent.CompletableFuture@3663d986[Not completed, 1 dependents], params: [[45, 45, 32, -28, -68, -104, -26, -125, -96, -27, ...], 0, [50], [53]]
+	at org.redisson.client.handler.CommandDecoder.decode(CommandDecoder.java:370) ~[redisson-3.17.0.jar:3.17.0]
+	at org.redisson.client.handler.CommandDecoder.decodeCommand(CommandDecoder.java:198) ~[redisson-3.17.0.jar:3.17.0]
+	at org.redisson.client.handler.CommandDecoder.decode(CommandDecoder.java:137) ~[redisson-3.17.0.jar:3.17.0]
+	at org.redisson.client.handler.CommandDecoder.decode(CommandDecoder.java:113) ~[redisson-3.17.0.jar:3.17.0]
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:510) ~[netty-codec-4.1.76.Final.jar:4.1.76.Final]
+	at io.netty.handler.codec.ReplayingDecoder.callDecode(ReplayingDecoder.java:366) ~[netty-codec-4.1.76.Final.jar:4.1.76.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:279) ~[netty-codec-4.1.76.Final.jar:4.1.76.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379) ~[netty-transport-4.1.76.Final.jar:4.1.76.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365) ~[netty-transport-4.1.76.Final.jar:4.1.76.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357) ~[netty-transport-4.1.76.Final.jar:4.1.76.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410) ~[netty-transport-4.1.76.Final.jar:4.1.76.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379) ~[netty-transport-4.1.76.Final.jar:4.1.76.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365) ~[netty-transport-4.1.76.Final.jar:4.1.76.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919) ~[netty-transport-4.1.76.Final.jar:4.1.76.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166) ~[netty-transport-4.1.76.Final.jar:4.1.76.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:722) ~[netty-transport-4.1.76.Final.jar:4.1.76.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658) ~[netty-transport-4.1.76.Final.jar:4.1.76.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584) ~[netty-transport-4.1.76.Final.jar:4.1.76.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496) ~[netty-transport-4.1.76.Final.jar:4.1.76.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986) ~[netty-common-4.1.76.Final.jar:4.1.76.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.76.Final.jar:4.1.76.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.76.Final.jar:4.1.76.Final]
+	... 1 common frames omitted
+
